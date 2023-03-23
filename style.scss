@@ -59,6 +59,7 @@ body {
 							font-size: 20px;
 						}
 						button {
+							font-family: "Gilroy-Bold", sans-serif;
 							margin-top: 20px;
 							padding: 15px 30px;
 							color: white;
@@ -93,6 +94,9 @@ body {
 				justify-content: space-between;
 				align-items: center;
 				width: 50%;
+				a {
+					text-decoration: none;
+				}
 				.other-links {
 					width: 50%;
 					display: flex;
@@ -105,7 +109,7 @@ body {
 				}
 				img {
 					margin-right: 30px;
-					height: 30px;
+					height: 20px;
 				}
 			}
 		}
@@ -131,12 +135,16 @@ body {
 					p {
 						font-family: "Gilroy-Bold", sans-serif;
 						margin: 10px 0;
+						font-size: 20px;
 					}
 					.last-social-links {
 						background-color: white;
 						width: max-content;
 						padding: 10px;
 						border-radius: 20px;
+						a {
+							text-decoration: none;
+						}
 						svg {
 							height: 30px;
 							fill: $primary-col;
@@ -155,7 +163,14 @@ body {
 				display: flex;
 				align-items: center;
 				gap: 100px;
-				padding: 30px 0 60px 0;
+				padding: 30px 20px 60px 20px;
+
+				.logo {
+					height: max-content;
+					img {
+						height: 100px;
+					}
+				}
 				ul {
 					list-style: none;
 					li {

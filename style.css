@@ -72,6 +72,7 @@ body .inner-container .content-container .main-content .text-container .info-con
 }
 
 body .inner-container .content-container .main-content .text-container .info-container button {
+  font-family: "Gilroy-Bold", sans-serif;
   margin-top: 20px;
   padding: 15px 30px;
   color: white;
@@ -115,6 +116,10 @@ body .first-container .navbar .links {
   width: 50%;
 }
 
+body .first-container .navbar .links a {
+  text-decoration: none;
+}
+
 body .first-container .navbar .links .other-links {
   width: 50%;
   display: -webkit-box;
@@ -135,7 +140,7 @@ body .first-container .navbar .links .other-links a {
 
 body .first-container .navbar .links img {
   margin-right: 30px;
-  height: 30px;
+  height: 20px;
 }
 
 body .first-container .image-container {
@@ -182,6 +187,7 @@ body .fourth-container .content-container .main-content .text-container {
 body .fourth-container .content-container .main-content .text-container p {
   font-family: "Gilroy-Bold", sans-serif;
   margin: 10px 0;
+  font-size: 20px;
 }
 
 body .fourth-container .content-container .main-content .text-container .last-social-links {
@@ -191,6 +197,10 @@ body .fourth-container .content-container .main-content .text-container .last-so
   width: max-content;
   padding: 10px;
   border-radius: 20px;
+}
+
+body .fourth-container .content-container .main-content .text-container .last-social-links a {
+  text-decoration: none;
 }
 
 body .fourth-container .content-container .main-content .text-container .last-social-links svg {
@@ -214,7 +224,17 @@ body .fourth-container .footer-container .footer-content {
       -ms-flex-align: center;
           align-items: center;
   gap: 100px;
-  padding: 30px 0 60px 0;
+  padding: 30px 20px 60px 20px;
+}
+
+body .fourth-container .footer-container .footer-content .logo {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+body .fourth-container .footer-container .footer-content .logo img {
+  height: 100px;
 }
 
 body .fourth-container .footer-container .footer-content ul {
