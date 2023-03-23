@@ -1,5 +1,4 @@
 const viewportHeight = window.innerHeight;
-
 var currentIndex = 0;
 let prevScrollPos = window.pageYOffset;
 let last = 0;
