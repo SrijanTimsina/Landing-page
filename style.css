@@ -44,14 +44,15 @@ body .inner-container {
   height: 100vh;
   padding: 20px;
   opacity: 0;
+  overflow: hidden;
 }
 
 body .inner-container .content-container {
   height: 100%;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -93,6 +94,35 @@ body .inner-container .content-container .main-content .image-container img {
   max-width: 420px;
 }
 
+@media screen and (max-width: 930px) {
+  body .inner-container .content-container {
+    position: relative;
+  }
+  body .inner-container .content-container .main-content .text-container .heading-container .heading {
+    font-size: 40px;
+  }
+  body .inner-container .content-container .image-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: -1;
+  }
+  body .inner-container .content-container .image-container img {
+    opacity: 0.3;
+  }
+}
+
 body .inner-container.active {
   -webkit-animation: fade-in 1s ease-in-out forwards 0.5s;
           animation: fade-in 1s ease-in-out forwards 0.5s;
@@ -129,7 +159,6 @@ body .first-container .navbar .links {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
 }
 
 body .first-container .navbar .links a {
@@ -137,7 +166,6 @@ body .first-container .navbar .links a {
 }
 
 body .first-container .navbar .links .other-links {
-  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,6 +175,8 @@ body .first-container .navbar .links .other-links {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 40px;
+  margin-right: 30px;
 }
 
 body .first-container .navbar .links .other-links a {
@@ -154,9 +184,50 @@ body .first-container .navbar .links .other-links a {
   text-decoration: none;
 }
 
-body .first-container .navbar .links img {
+body .first-container .navbar .links .social-links img {
   margin-right: 30px;
   height: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  body .first-container .navbar .logo img {
+    width: 200px;
+  }
+  body .first-container .navbar .links .other-links a {
+    font-size: 14px;
+  }
+  body .first-container .navbar .links .social-links img {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) and (max-width: 650px) {
+  body .first-container .navbar .links .social-links img {
+    margin-right: 10px;
+  }
+  body .first-container .navbar .links .other-links {
+    gap: 10px;
+  }
+  body .first-container .navbar .links .other-links a {
+    margin-right: 0;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 800px) and (max-width: 650px) and (max-width: 550px) {
+  body .first-container .navbar .logo img {
+    width: 170px;
+  }
+  body .first-container .navbar .links .social-links {
+    display: none;
+  }
+  body .first-container .navbar .links .other-links {
+    gap: 10px;
+    margin-right: 0;
+  }
+  body .first-container .navbar .links .other-links a {
+    font-size: 10px;
+  }
 }
 
 body .first-container .image-container {
@@ -243,6 +314,10 @@ body .fourth-container .footer-container .footer-content {
   padding: 30px 20px 60px 20px;
 }
 
+body .fourth-container .footer-container .footer-content .text-container {
+  width: 100%;
+}
+
 body .fourth-container .footer-container .footer-content .logo {
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -264,6 +339,16 @@ body .fourth-container .footer-container .footer-content ul li {
 body .fourth-container .footer-container .footer-content ul li a {
   text-decoration: none;
   color: white;
+}
+
+@media screen and (max-width: 700px) {
+  body .fourth-container .footer-container .footer-content {
+    gap: 0;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 @-webkit-keyframes fade-in {
