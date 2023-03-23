@@ -1,0 +1,1 @@
+const viewportHeight = window.innerHeight;
