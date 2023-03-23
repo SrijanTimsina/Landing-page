@@ -25,6 +25,11 @@ body {
   background: linear-gradient(to right, rgba(131, 139, 197, 0.2), rgba(131, 139, 197, 0.4), rgba(131, 139, 197, 0.4), rgba(131, 139, 197, 0.2));
 }
 
+body .whole-container {
+  width: 100%;
+  position: relative;
+}
+
 body .container {
   width: 100%;
   max-width: 1000px;
@@ -38,6 +43,7 @@ body .primary-col-text {
 body .inner-container {
   height: 100vh;
   padding: 20px;
+  opacity: 0;
 }
 
 body .inner-container .content-container {
@@ -85,6 +91,16 @@ body .inner-container .content-container .main-content .text-container .info-con
 body .inner-container .content-container .main-content .image-container img {
   max-height: 450px;
   max-width: 420px;
+}
+
+body .inner-container.active {
+  -webkit-animation: fade-in 1s ease-in-out forwards 0.5s;
+          animation: fade-in 1s ease-in-out forwards 0.5s;
+}
+
+body .inner-container.hide {
+  -webkit-animation: fade-out 1s ease-in-out forwards;
+          animation: fade-out 1s ease-in-out forwards;
 }
 
 body .first-container .navbar {
@@ -248,4 +264,40 @@ body .fourth-container .footer-container .footer-content ul li {
 body .fourth-container .footer-container .footer-content ul li a {
   text-decoration: none;
   color: white;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0;
+  }
 }

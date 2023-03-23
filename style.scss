@@ -26,6 +26,10 @@ body {
 		rgba(#838bc5, 0.4),
 		rgba(#838bc5, 0.2)
 	);
+	.whole-container {
+		width: 100%;
+		position: relative;
+	}
 	.container {
 		width: 100%;
 		max-width: 1000px;
@@ -37,12 +41,12 @@ body {
 	.inner-container {
 		height: 100vh;
 		padding: 20px;
+		opacity: 0;
 		.content-container {
 			height: 100%;
 			width: 100%;
 			display: flex;
 			align-items: center;
-
 			.main-content {
 				display: flex;
 				gap: 50px;
@@ -77,6 +81,12 @@ body {
 					}
 				}
 			}
+		}
+		&.active {
+			animation: fade-in 1s ease-in-out forwards 0.5s;
+		}
+		&.hide {
+			animation: fade-out 1s ease-in-out forwards;
 		}
 	}
 	.first-container {
@@ -182,6 +192,24 @@ body {
 					}
 				}
 			}
+		}
+	}
+
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fade-out {
+		from {
+			opacity: 0.4;
+		}
+		to {
+			opacity: 0;
 		}
 	}
 }
