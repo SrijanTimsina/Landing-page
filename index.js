@@ -1,4 +1,3 @@
-const viewportHeight = window.innerHeight;
 var currentIndex = 0;
 let prevScrollPos = window.pageYOffset;
 let last = 0;
@@ -32,6 +31,7 @@ function scrollToSmoothly(pos, time) {
 }
 
 scroll = (up) => {
+	var viewportHeight = window.innerHeight;
 	const now = new Date().getTime();
 	if (now - last > 1000) {
 		last = now;
