@@ -30,8 +30,9 @@ function scrollToSmoothly(pos, time) {
 	});
 }
 
+var element, rect, position;
+
 scroll = (up) => {
-	var viewportHeight = window.innerHeight;
 	const now = new Date().getTime();
 	if (now - last > 1000) {
 		last = now;
@@ -42,8 +43,11 @@ scroll = (up) => {
 				innerContainer[currentIndex + 1].classList.remove("hide");
 			}, 500);
 			currentIndex--;
+			element = document.getElementById(`${currentIndex}-container`);
+			rect = element.getBoundingClientRect();
+			position = rect.top + window.scrollY;
 			innerContainer[currentIndex].classList.add("active");
-			scrollToSmoothly(viewportHeight * currentIndex, 500);
+			scrollToSmoothly(position, 500);
 		}
 		if (currentIndex < 4 && !up) {
 			innerContainer[currentIndex].classList.add("hide");
@@ -52,8 +56,11 @@ scroll = (up) => {
 				innerContainer[currentIndex - 1].classList.remove("hide");
 			}, 500);
 			currentIndex++;
+			element = document.getElementById(`${currentIndex}-container`);
+			rect = element.getBoundingClientRect();
+			position = rect.top + window.scrollY;
 			innerContainer[currentIndex].classList.add("active");
-			scrollToSmoothly(viewportHeight * currentIndex, 500);
+			scrollToSmoothly(position, 500);
 		}
 	}
 };
