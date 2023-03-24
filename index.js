@@ -73,6 +73,7 @@ document.addEventListener("touchstart", function (event) {
 
 document.addEventListener("touchmove", function (event) {
 	endY = event.touches[0].clientY;
+	event.preventDefault();
 });
 
 document.addEventListener("touchend", function () {
