@@ -65,6 +65,9 @@ body .inner-container .content-container .main-content {
   display: -ms-flexbox;
   display: flex;
   gap: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .inner-container .content-container .main-content .text-container .heading-container .heading {
@@ -234,11 +237,6 @@ body .first-container .navbar .links .social-links img {
   body .first-container .navbar .links .other-links a {
     font-size: 10px;
   }
-}
-
-body .first-container .image-container {
-  -webkit-transform: translateY(-60px);
-          transform: translateY(-60px);
 }
 
 body .fourth-container {

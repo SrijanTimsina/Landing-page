@@ -53,6 +53,7 @@ body {
 			.main-content {
 				display: flex;
 				gap: 50px;
+				align-items: center;
 				.text-container {
 					.heading-container {
 						.heading {
@@ -210,9 +211,6 @@ body {
 					}
 				}
 			}
-		}
-		.image-container {
-			transform: translateY(-60px);
 		}
 	}
 	.fourth-container {
