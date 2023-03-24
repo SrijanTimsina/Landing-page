@@ -30,7 +30,13 @@ function scrollToSmoothly(pos, time) {
 		}
 	});
 }
-
+document.addEventListener(
+	"touchmove",
+	function (event) {
+		event.preventDefault();
+	},
+	{ passive: false }
+);
 window.onscroll = function (e) {
 	var up = prevScrollPos > this.scrollY;
 	prevScrollPos = this.scrollY;
