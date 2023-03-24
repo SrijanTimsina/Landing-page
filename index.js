@@ -30,16 +30,8 @@ function scrollToSmoothly(pos, time) {
 		}
 	});
 }
-document.addEventListener(
-	"touchmove",
-	function (event) {
-		event.preventDefault();
-	},
-	{ passive: false }
-);
-window.onscroll = function (e) {
-	var up = prevScrollPos > this.scrollY;
-	prevScrollPos = this.scrollY;
+
+scroll = (up) => {
 	const now = new Date().getTime();
 	if (now - last > 1000) {
 		last = now;
@@ -64,4 +56,28 @@ window.onscroll = function (e) {
 			scrollToSmoothly(viewportHeight * currentIndex, 500);
 		}
 	}
+};
+
+var startY, endY;
+
+document.addEventListener("touchstart", function (event) {
+	startY = event.touches[0].clientY;
+});
+
+document.addEventListener("touchmove", function (event) {
+	endY = event.touches[0].clientY;
+});
+
+document.addEventListener("touchend", function () {
+	if (endY < startY) {
+		scroll(true);
+	} else if (endY > startY) {
+		scroll(false);
+	}
+});
+
+window.onscroll = function (e) {
+	var up = prevScrollPos > this.scrollY;
+	prevScrollPos = this.scrollY;
+	scroll(up);
 };
