@@ -19,6 +19,8 @@ $primary-col: #3251bf;
 }
 body {
 	font-family: "Gilroy-Regular", sans-serif;
+	height: 100vh;
+	overflow: scroll;
 	background: linear-gradient(
 		to right,
 		rgba(#838bc5, 0.2),
@@ -117,6 +119,9 @@ body {
 		}
 	}
 	.first-container {
+		.content-container {
+			height: calc(100% - 55px);
+		}
 		.navbar {
 			display: flex;
 			justify-content: space-between;
@@ -213,11 +218,15 @@ body {
 	.fourth-container {
 		padding: 0px;
 		.content-container {
+			height: 100%;
 			width: 100%;
 			flex-direction: column;
-			justify-content: space-between;
+			justify-content: flex-end;
 			.main-content {
-				height: 100%;
+				height: calc(100% - 236px);
+				@media screen and (max-width: 550px) {
+					height: calc(100% - 371px);
+				}
 				.text-container {
 					display: flex;
 					text-align: center;
