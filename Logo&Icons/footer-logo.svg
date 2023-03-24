@@ -3,7 +3,10 @@
   <defs>
     <style type="text/css">
 	.st0{fill:none;}
-	.st1{fill:#FFFFFF;}
+	.st1{
+    fill:#FFFFFF;
+    text-align:left;
+    }
 	.st2{font-family:'Gilroy-Black';}
 	.st3{font-size:8px;}
 	.st4{font-family:'Gilroy-Regular';}
@@ -12,7 +15,7 @@
 </style>
   </defs>
   <rect x="9.1" y="34" class="st0" width="126.3" height="29.4"/>
-  <text transform="matrix(1, 0, 0, 1, 9.0588, 39.5807)" style="white-space: pre;"><tspan x="0" y="0" class="st1 st2 st3">equilibria.finance</tspan><tspan x="0" y="8" class="st1 st4 st5">Copyright 2023. All rights are reserved.</tspan></text>
+  <text transform="matrix(1, 0, 0, 1, 9.0588, 39.5807)" style="white-space: pre;text-align:left;"><tspan x="0" y="0" class="st1 st2 st3">equilibria.finance</tspan><tspan x="0" y="8" class="st1 st4 st5">Copyright 2023. All rights are reserved.</tspan></text>
   <g>
     <g>
       <path class="st6" d="M22.8,21.6c-0.5,4.6-2.6,5.9-5.9,5.9S11,24.9,11,21.6"/>

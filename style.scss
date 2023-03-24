@@ -12,6 +12,12 @@ $primary-col: #3251bf;
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: "Gilroy-Black";
+	src: url("./Gilroy/Gilroy-Black.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -129,8 +135,10 @@ body {
 			justify-content: space-between;
 			align-items: center;
 			.logo {
-				img {
+				height: 50px;
+				svg {
 					height: 50px;
+					width: 300px;
 				}
 			}
 			.links {
@@ -160,7 +168,7 @@ body {
 			}
 			@media screen and (max-width: 800px) {
 				.logo {
-					img {
+					svg {
 						width: 200px;
 					}
 				}
@@ -193,8 +201,8 @@ body {
 					}
 					@media screen and (max-width: 550px) {
 						.logo {
-							img {
-								width: 170px;
+							svg {
+								width: 160px;
 							}
 						}
 						.links {
@@ -274,8 +282,9 @@ body {
 				}
 				.logo {
 					height: max-content;
-					img {
+					svg {
 						height: 100px;
+						width: 255px;
 					}
 				}
 				ul {
@@ -288,7 +297,7 @@ body {
 						}
 					}
 				}
-				@media screen and (max-width: 700px) {
+				@media screen and (max-width: 730px) {
 					gap: 0;
 					width: 100%;
 					justify-content: space-between;
@@ -296,7 +305,7 @@ body {
 						gap: 30px;
 						justify-content: space-between;
 					}
-					@media screen and (max-width: 550px) {
+					@media screen and (max-width: 580px) {
 						flex-direction: column;
 						align-items: flex-start;
 
