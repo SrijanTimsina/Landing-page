@@ -89,7 +89,6 @@ document.addEventListener(
 	"touchmove",
 	function (event) {
 		endY = event.touches[0].clientY;
-		event.preventDefault();
 	},
 	{ passive: false }
 );
