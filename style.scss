@@ -28,6 +28,7 @@ body {
 	font-family: "Gilroy-Regular", sans-serif;
 	height: 100vh;
 	overflow: scroll;
+	overflow-x: hidden !important;
 	background: linear-gradient(
 		to right,
 		rgba(#838bc5, 0.2),
