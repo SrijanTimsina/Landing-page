@@ -5,7 +5,6 @@ const innerContainer = document.querySelectorAll(".inner-container");
 const sidebarContainer = document.getElementById(
 	"side-bar-container"
 );
-var touchScreen = false;
 
 document.getElementById("hamburger").addEventListener("click", () => {
 	document.body.style.overflow = "hidden";
@@ -83,28 +82,28 @@ scroll = (up) => {
 var startY, endY;
 
 document.addEventListener("touchstart", function (event) {
-	touchScreen = true;
 	startY = event.touches[0].clientY;
 });
 
-document.addEventListener("touchmove", function (event) {
-	endY = event.touches[0].clientY;
-	event.preventDefault();
-});
+document.addEventListener(
+	"touchmove",
+	function (event) {
+		endY = event.touches[0].clientY;
+		event.preventDefault();
+	},
+	{ passive: false }
+);
 
 document.addEventListener("touchend", function () {
-	if (endY < startY) {
+	if (startY - endY > 20) {
 		scroll(true);
-	} else if (endY > startY) {
+	} else if (endY - startY > 20) {
 		scroll(false);
 	}
 });
 
 window.onscroll = function (e) {
-	if (!touchScreen) {
-		var up = prevScrollPos > this.scrollY;
-		prevScrollPos = this.scrollY;
-		scroll(up);
-	}
-	return;
+	var up = prevScrollPos > this.scrollY;
+	prevScrollPos = this.scrollY;
+	scroll(up);
 };
