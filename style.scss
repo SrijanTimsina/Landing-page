@@ -44,6 +44,7 @@ body {
 		right: 0;
 		top: 0;
 		bottom: 0;
+		display: none;
 		overflow: hidden;
 		z-index: 100;
 		padding-top: 60px;
@@ -111,14 +112,15 @@ body {
 				fill: $primary-col;
 			}
 		}
-		&.side-bar-show {
-			display: block;
-		}
 	}
 	.hamburger {
 		display: none;
 	}
 	@media screen and (max-width: 550px) {
+		.sidebar-container {
+			display: block;
+			transform: translateX(-100%);
+		}
 		.hamburger {
 			display: block;
 		}
