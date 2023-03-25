@@ -51,6 +51,7 @@ scroll = (up) => {
 	if (now - last > 1000) {
 		last = now;
 		if (currentIndex > 0 && up) {
+			console.log(currentIndex);
 			innerContainer[currentIndex].classList.add("hide");
 			setTimeout(() => {
 				innerContainer[currentIndex + 1].classList.remove("active");
@@ -63,7 +64,8 @@ scroll = (up) => {
 			innerContainer[currentIndex].classList.add("active");
 			scrollToSmoothly(position, 500);
 		}
-		if (currentIndex < 4 && !up) {
+		if (currentIndex + 1 < 4 && !up) {
+			console.log(currentIndex);
 			innerContainer[currentIndex].classList.add("hide");
 			setTimeout(() => {
 				innerContainer[currentIndex - 1].classList.remove("active");
@@ -96,9 +98,9 @@ document.addEventListener(
 
 document.addEventListener("touchend", function () {
 	if (startY - endY > 20) {
-		scroll(true);
-	} else if (endY - startY > 20) {
 		scroll(false);
+	} else if (endY - startY > 20) {
+		scroll(true);
 	}
 });
 
