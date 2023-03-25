@@ -51,7 +51,6 @@ scroll = (up) => {
 	if (now - last > 1000) {
 		last = now;
 		if (currentIndex > 0 && up) {
-			console.log(currentIndex);
 			innerContainer[currentIndex].classList.add("hide");
 			setTimeout(() => {
 				innerContainer[currentIndex + 1].classList.remove("active");
@@ -65,7 +64,6 @@ scroll = (up) => {
 			scrollToSmoothly(position, 500);
 		}
 		if (currentIndex + 1 < 4 && !up) {
-			console.log(currentIndex);
 			innerContainer[currentIndex].classList.add("hide");
 			setTimeout(() => {
 				innerContainer[currentIndex - 1].classList.remove("active");
