@@ -2,6 +2,20 @@ var currentIndex = 0;
 let prevScrollPos = window.pageYOffset;
 let last = 0;
 const innerContainer = document.querySelectorAll(".inner-container");
+const sidebarContainer = document.getElementById(
+	"side-bar-container"
+);
+
+document.getElementById("hamburger").addEventListener("click", () => {
+	document.body.style.overflow = "hidden";
+	sidebarContainer.classList.add("side-bar-show");
+	sidebarContainer.classList.remove("side-bar-hide");
+});
+document.getElementById("close").addEventListener("click", () => {
+	document.body.style.overflow = "auto";
+	sidebarContainer.classList.add("side-bar-hide");
+	sidebarContainer.classList.remove("side-bar-show");
+});
 
 function scrollToSmoothly(pos, time) {
 	var currentPos = window.pageYOffset;
