@@ -102,14 +102,13 @@ body {
 			background-color: #fff;
 			padding: 10px;
 			border-radius: 10px;
-			display: flex;
-			gap: 20px;
 
 			a {
 				text-decoration: none;
 			}
-			img {
+			svg {
 				height: 30px;
+				fill: $primary-col;
 			}
 		}
 		&.side-bar-show {

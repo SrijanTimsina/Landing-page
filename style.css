@@ -137,18 +137,15 @@ body .sidebar-container .sidebar-social {
   background-color: #fff;
   padding: 10px;
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
 }
 
 body .sidebar-container .sidebar-social a {
   text-decoration: none;
 }
 
-body .sidebar-container .sidebar-social img {
+body .sidebar-container .sidebar-social svg {
   height: 30px;
+  fill: #3251bf;
 }
 
 body .sidebar-container.side-bar-show {
