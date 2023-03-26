@@ -85,20 +85,20 @@ document.addEventListener("touchstart", function (event) {
 	startY = event.touches[0].clientY;
 });
 
-document.addEventListener(
-	"touchmove",
-	function (event) {
-		endY = event.touches[0].clientY;
-	},
-	{ passive: false }
-);
+document.addEventListener("touchmove", function (event) {
+	endY = event.touches[0].clientY;
+});
 
-document.addEventListener("touchend", function () {
-	if (startY - endY > 20) {
-		scroll(false);
-	} else if (endY - startY > 20) {
-		scroll(true);
+document.addEventListener("touchend", function (event) {
+	if (startY != 0 && endY != 0) {
+		if (startY - endY > 20) {
+			scroll(false);
+		} else if (endY - startY > 20) {
+			scroll(true);
+		}
 	}
+	startY = 0;
+	endY = 0;
 });
 
 window.onscroll = function (e) {
